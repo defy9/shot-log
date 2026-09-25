@@ -18,7 +18,7 @@
   --ring:#D9541A; --make:#1F7A5A; --miss:#B7C0C7;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*,*::before,*::after{box-sizing:inherit}
+*,*::before,*::after{box-sizing:border-box}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#141B21; --surface:#1D262E; --ink:#E9EDEF; --muted:#94A2AD; --line:#33414C;
   --ring:#F0773A; --make:#4FBF93; --miss:#3A4853;
@@ -52,7 +52,7 @@ h1{font:700 1.9rem/1.1 "Barlow Condensed",Impact,sans-serif;margin:8px 0 2px;let
 .chart svg{width:100%;height:auto;display:block}
 
 form{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:22px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
 label{display:block;font-size:.85rem;color:var(--muted);font-weight:500}
 input,select{width:100%;margin-top:4px;padding:10px 12px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px}
 input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
